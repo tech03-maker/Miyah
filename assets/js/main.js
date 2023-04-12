@@ -109,8 +109,8 @@ function handle_buyOrder(){
     const cartContent = cart.querySelector(".cart-content");
     cartContent.innerHTML = '';
     alert("Your Order Has Been Placed Successfully! :)");
-    
-    update;
+
+    update();
 
 }
 
@@ -132,6 +132,8 @@ function updateTotal(){
 
     totalElement.innerHTML = "$" + total;
 }
+    
+  
 
 
 // HTML COMPONENTS
