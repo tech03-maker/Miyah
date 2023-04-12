@@ -57,6 +57,7 @@ header{
 .logo{
     font-size: 1.1rem;
     font-weight: 600;
+    padding-left: 20px;
     text-decoration: none;
     color: var(----sec-color);
     text-transform: uppercase;
