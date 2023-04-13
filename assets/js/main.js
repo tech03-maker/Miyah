@@ -1,3 +1,11 @@
+
+"use strict";
+const loader = document.getElementById('preloader');
+setTimeout(() => {
+    loader.style.display = 'none';
+}, 6000);
+    
+
 // OPEN & CLOSE CART
 const cartIcon = document.querySelector("#cart-icon");
 const cart = document.querySelector(".cart");
@@ -106,9 +114,38 @@ function handle_buyOrder(){
         alert("There is No Order To Place \nPlease Make an Order Now!");
         return;
     }
-    const cartContent = cart.querySelector(".cart-content");
-    cartContent.innerHTML = '';
-    alert("Your Order Has Been Placed Successfully! :)");
+
+var handler = PaystackPop.setup({
+    key: 'pk_live_5d2c90108a7deea456681e80126226cc07c6c5e1',
+    email: 'abushaaziyyah@gmail.com',
+    amount: '100000',
+    currency: 'NGN',
+    ref: 'ISLAMHY3',
+
+    callback: function(response) {
+      // handle the response from Paystack
+      console.log(response);
+    },
+    onClose: function() {
+      // handle the case where the user closes the Paystack window
+      console.log("Payment window closed");
+    }
+  });
+  var placeOrderButton = document.querySelector(".btn-buy");
+
+placeOrderButton.addEventListener("click", function() {
+  handler.openIframe();
+});
+// callback: function CallBack(response) {
+//     // handle the response from Paystack
+//     console.log(response);
+  
+//     // redirect the customer to the confirmation page
+//     window.location.href = `assets/pages/confirmationpage.html`;
+//   }
+    // const cartContent = cart.querySelector(".cart-content");
+    // cartContent.innerHTML = '';
+    // alert("Your Order Has Been Placed Successfully! :)");
 
     update();
 
@@ -132,7 +169,10 @@ function updateTotal(){
 
     totalElement.innerHTML = "$" + total;
 }
-    
+
+  
+
+  
   
 
 
