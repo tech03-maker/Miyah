@@ -349,7 +349,7 @@ header{
         width: 95vw;
         display: flex;
         justify-content: space-around;
-        /* gap: 10; */
+        gap: 10;
     }
     
     .box{
