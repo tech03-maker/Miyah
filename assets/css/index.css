@@ -303,7 +303,7 @@ header{
     }
 
     .eid{
-        background-image: linear-gradient(rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(../images/6694ef74b0a937ff3434ad27dfe0e8f9.gif);
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(../images/happy-eid-mubarak-gif.webp);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -329,7 +329,7 @@ header{
 
     .heading h1{
         text-shadow: var(--text-color);
-        font-size: 3.2em;
+        font-size: 6.9em;
         font-weight: 800;
         letter-spacing: 0.15em;
     }
@@ -360,6 +360,7 @@ header{
         align-items: center;
         justify-content: space-evenly;
         position: relative;
+        /* margin-top: 60px; */
     }
 
     span.num{
@@ -429,6 +430,12 @@ header{
     .countdown{
         gap: 10;
     }
+    span.text{
+        bottom: 9px;
+    }
+    .heading h1{
+        font-size: 3.3em;
+    }
 }
 
 @media(max-width:360px){
@@ -443,5 +450,11 @@ header{
     }
     .countdown{
         gap: 10;
+    }
+    span.text{
+        bottom: 9px;
+    }
+    .heading h1{
+        font-size: 3.3em;
     }
 }
