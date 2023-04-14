@@ -1,9 +1,12 @@
-
 "use strict";
 const loader = document.getElementById('preloader');
 setTimeout(() => {
     loader.style.display = 'none';
 }, 6000);
+
+
+
+
     
 
 // OPEN & CLOSE CART
@@ -115,27 +118,38 @@ function handle_buyOrder(){
         return;
     }
 
-var handler = PaystackPop.setup({
-    key: 'pk_live_5d2c90108a7deea456681e80126226cc07c6c5e1',
-    email: 'abushaaziyyah@gmail.com',
-    amount: '100000',
-    currency: 'NGN',
-    ref: 'ISLAMHY3',
+    var handler = PaystackPop.setup({
+        key: 'pk_live_5d2c90108a7deea456681e80126226cc07c6c5e1',
+        email: 'abdulrohufislamiyyah@gmail.com',
+        amount: 10000,
+        currency: 'NGN',
+        ref: 'ABC123',
+        metadata: {
+          custom_fields: [
+            {
+              display_name: "I-TECH",
+              variable_name: "JUMAH MUHAMMED",
+              value: "J Tech"
+            }
+          ]
+        },
+        callback: function(response) {
+          // handle the response from Paystack
+          console.log(response);
+        },
+        onClose: function() {
+          // handle the case where the user closes the Paystack window
+          console.log("Payment window closed");
+        }
+      });
 
-    callback: function(response) {
-      // handle the response from Paystack
-      console.log(response);
-    },
-    onClose: function() {
-      // handle the case where the user closes the Paystack window
-      console.log("Payment window closed");
-    }
-  });
-  var placeOrderButton = document.querySelector(".btn-buy");
+      var placeOrderButton = document.querySelector(".btn-buy");
 
 placeOrderButton.addEventListener("click", function() {
   handler.openIframe();
 });
+
+      
 // callback: function CallBack(response) {
 //     // handle the response from Paystack
 //     console.log(response);
@@ -189,4 +203,3 @@ function CartBoxComponent(title, price, ImgSrc) {
                         <i class="fa fa-trash-alt cart-remove"></i>
                     </div>`
 }
-        

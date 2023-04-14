@@ -301,9 +301,99 @@ header{
         width: 50%;
         /* height: 50px; */
     }
+
+    .eid{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5)50%, rgba(0, 0, 0, 0.5)50%), url(../images/6694ef74b0a937ff3434ad27dfe0e8f9.gif);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        text-align: center;
+        background-attachment: fixed;
+        /* font-family: "Poppins"; */
+        color: white;
+        padding: 50px;
+    }
+
+    /* .wrapper{
+        position: absolute;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        left: 50%;
+        font-size: 16px;
+    } */
+
+    .heading{
+        text-align: center;
+        margin-bottom: 4em;
+    }
+
+    .heading h1{
+        text-shadow: var(--text-color);
+        font-size: 6.2em;
+        font-weight: 800;
+        letter-spacing: 0.15em;
+    }
+
+    .heading h3{
+        font-size: 1.9em;
+        letter-spacing: 0.05em;
+        /* width: 300px; */
+        margin: auto;
+        display: inline-block;
+        text-transform: uppercase;
+        /* background-color: #fff; */
+        backdrop-filter: blur(5px);
+    }
+
+    .countdown{
+        width: 95vw;
+        display: flex;
+        justify-content: space-around;
+        /* gap: 10; */
+    }
     
+    .box{
+        width: 28vmin;
+        height: 29vmin;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        position: relative;
+    }
 
+    span.num{
+        backdrop-filter: blur(12px);
+        height: 100%;
+        width: 100%;
+        display: grid;
+        place-items: center;
+        font-size: 4em;
+        border-radius: 0.1em;
+    }
 
+    span.num:after{
+        content: "";
+        position: absolute;
+        /* backdrop-filter: blur(12px); */
+        height: 100%;
+        width: 50%;
+        left: 0;
+    }
+
+    span.text{
+        font-size: 1em;
+        background-color: #fff;
+        color: #0c0a0a;
+        display: block;
+        width: 80%;
+        position: relative;
+        text-align: center;
+        bottom: 20px;
+        padding: 0.7em 0;
+        font-weight: 600;
+        border-radius: 0.03em;
+    }
 
 
 
