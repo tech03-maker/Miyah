@@ -329,7 +329,7 @@ header{
 
     .heading h1{
         text-shadow: var(--text-color);
-        font-size: 6.2em;
+        font-size: 3.2em;
         font-weight: 800;
         letter-spacing: 0.15em;
     }
