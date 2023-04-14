@@ -426,6 +426,9 @@ header{
     span.num{
         font-size: 3em;
     }
+    .countdown{
+        gap: 10;
+    }
 }
 
 @media(max-width:360px){
@@ -437,5 +440,8 @@ header{
     }
     span.num{
         font-size: 2em;
+    }
+    .countdown{
+        gap: 10;
     }
 }
