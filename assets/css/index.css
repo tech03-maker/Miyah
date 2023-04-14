@@ -423,6 +423,9 @@ header{
     .cart{
         width: 320px;
     }
+    span.num{
+        font-size: 3em;
+    }
 }
 
 @media(max-width:360px){
@@ -431,5 +434,8 @@ header{
     }
     .cart{
         width: 280px;
+    }
+    span.num{
+        font-size: 2em;
     }
 }
