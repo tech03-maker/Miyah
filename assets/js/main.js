@@ -144,23 +144,24 @@ function handle_buyOrder() {
     },
     callback: function (response) {
       // handle the response from Paystack
-      fetch("https://api.paystack.co/transaction/verify/:reference", {
-        headers: {
-          Authorization: "sk_live_aba9e75b0550fa9fc333c7eeabd4a0e4fdc345c2",
-        },
-      })
-        .then((response) => response.json())
-        .then((response) => {
-          if (response?.data.status === "success") {
-            window.location.href = `assets/pages/confirmationpage.html`;
-          }
-        })
-        .catch((error) => alert("Transaction failed"));
+      // fetch("https://api.paystack.co/transaction/verify/:reference", {
+      //   headers: {
+      //     Authorization: "sk_live_aba9e75b0550fa9fc333c7eeabd4a0e4fdc345c2",
+      //   },
+      // })
+      //   .then((response) => response.json())
+      //   .then((response) => {
+      //     if (response?.data.status === "success") {
+            window.location.href = `../pages/confirmationpage.html`;
+        //   }
+        // })
+        // .catch((error) => alert("Transaction failed"));
 
       console.log(response);
     },
     onClose: function () {
       // handle the case where the user closes the Paystack window
+      alert('Payment was not successful');
       console.log("Payment window closed");
     },
   });
