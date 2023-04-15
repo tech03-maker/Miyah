@@ -2,7 +2,7 @@
 const loader = document.getElementById("preloader");
 setTimeout(() => {
   loader.style.display = "none";
-}, 6000);
+}, 5000);
 
 // OPEN & CLOSE CART
 const cartIcon = document.querySelector(".cart-icon");
