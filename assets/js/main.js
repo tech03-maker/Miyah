@@ -7,11 +7,14 @@ setTimeout(() => {
 
 
 
+
     
 
 // OPEN & CLOSE CART
-const cartIcon = document.querySelector("#cart-icon");
+const cartIcon = document.querySelector(".cart-icon");
 const cart = document.querySelector(".cart");
+const cartNo=document.querySelector(".cart-no")
+const totalElement = cart.querySelector(".total-price");
 const closeCart = document.querySelector("#cart-close");
 
 cartIcon.addEventListener("click", () => {
@@ -32,17 +35,21 @@ function start(){
     addEvents();
 }
 
-function update() {
-    addEvents();
+ async function update() {
+
+   await addEvents();
+    cartNo.textContent=itemsAdded.length
+
     updateTotal();
 }
+
 
 function addEvents(){
     //REMOVE ITEMS FROM CART
     let cartRemove_btns = document.querySelectorAll('.cart-remove');
     console.log(cartRemove_btns);
     cartRemove_btns.forEach(btn => {
-        btn.addEventListener("click", handle_removeCartItem);
+        btn.addEventListener("click",handle_removeCartItem)
     });
 
     //change item quantity
@@ -54,7 +61,10 @@ function addEvents(){
     //add item to cart
     let addCart_btns = document.querySelectorAll(".add-cart");
     addCart_btns.forEach(btn => {
-        btn.addEventListener("click", handle_addCartItem);
+        
+        btn.addEventListener("click",handle_addCartItem )
+          
+     
     });
 
     //Buy order
@@ -78,6 +88,7 @@ function handle_addCartItem(){
         ImgSrc,
     };
 
+    console.log(itemsAdded,newToAdd)
     //handle item is already existed
     if(itemsAdded.find(el => el.title == newToAdd.title)){
         alert("This Item is Added To Cart Already!");
@@ -96,10 +107,11 @@ function handle_addCartItem(){
     update();
 }
 function handle_removeCartItem() {
+   
     this.parentElement.remove();
     itemsAdded = itemsAdded.filter(el => el.title != this.parentElement.querySelector('.cart-product-title')
     .innerHTML);
-
+    
     update();
 }
 
@@ -118,12 +130,19 @@ function handle_buyOrder(){
         return;
     }
 
+    // random reference
+    let randomNumber
+    for (let i = 0; i < 10; i++) {
+         randomNumber = Math.random();
+        console.log(randomNumber);
+      }
+
     var handler = PaystackPop.setup({
         key: 'pk_live_5d2c90108a7deea456681e80126226cc07c6c5e1',
         email: 'abdulrohufislamiyyah@gmail.com',
-        amount: 10000,
+        amount: Number(totalElement.innerHTML.substring(1))* 100,
         currency: 'NGN',
-        ref: 'ABC123',
+        ref: randomNumber,
         metadata: {
           custom_fields: [
             {
@@ -135,6 +154,14 @@ function handle_buyOrder(){
         },
         callback: function(response) {
           // handle the response from Paystack
+fetch("https://api.paystack.co/transaction/verify/:reference",{headers:{  "Authorization": "sk_live_aba9e75b0550fa9fc333c7eeabd4a0e4fdc345c2"}})
+.then((reponse)=>response.json()).then((response)=>{
+    if(response?.data.status==="success"){
+        window.location.href = `assets/pages/confirmationpage.html`;
+    }
+} )
+
+
           console.log(response);
         },
         onClose: function() {
@@ -143,11 +170,11 @@ function handle_buyOrder(){
         }
       });
 
-      var placeOrderButton = document.querySelector(".btn-buy");
 
-placeOrderButton.addEventListener("click", function() {
+
+
   handler.openIframe();
-});
+
 
       
 // callback: function CallBack(response) {
@@ -155,7 +182,7 @@ placeOrderButton.addEventListener("click", function() {
 //     console.log(response);
   
 //     // redirect the customer to the confirmation page
-//     window.location.href = `assets/pages/confirmationpage.html`;
+    // 
 //   }
     // const cartContent = cart.querySelector(".cart-content");
     // cartContent.innerHTML = '';
@@ -167,17 +194,19 @@ placeOrderButton.addEventListener("click", function() {
 
 
 //UPDATE AND RERENDER FUNCTIONS
+
 function updateTotal(){
-    let cartBoxes = document.querySelectorAll(".cart-box");
-    const totalElement = cart.querySelector(".total-price");
     let total = 0;
+    let cartBoxes = document.querySelectorAll(".cart-box");
+
+    
     cartBoxes.forEach((cartBox) => {
         let priceElement = cartBox.querySelector(".cart-price");
         let price = parseFloat(priceElement.innerHTML.replace("$", ""));
         let quantity =cartBox.querySelector(".cart-quantity").value;
         total += price * quantity;
     });
-
+console.log(total)
     //keep 2digits after the decimal points
     total = total.toFixed(2);
 

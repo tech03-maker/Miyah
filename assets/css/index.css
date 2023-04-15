@@ -68,9 +68,15 @@ header{
     font-weight: 600;
 }
 
-#cart-icon{
+.cart-icon{
     font-size: 1.8rem;
     cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.cart-icon span{
+    font-size: 15px;
 }
 
 .cart{
