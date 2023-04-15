@@ -500,6 +500,10 @@ span.text {
   .heading h1 {
     font-size: 3.3em;
   }
+
+  #preloader img{
+    width: 50%;
+  }
 }
 
 @media (max-width: 360px) {
@@ -520,5 +524,9 @@ span.text {
   }
   .heading h1 {
     font-size: 3.3em;
+  }
+
+  #preloader img{
+    width: 50%;
   }
 }
