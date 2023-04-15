@@ -73,6 +73,7 @@ header {
   cursor: pointer;
   background-color: transparent;
   border: none;
+  padding-right: 15px;
 }
 
 .cart-icon span {
@@ -92,7 +93,7 @@ header {
   background-color: var(--bg-color);
   box-shadow: -2px solid hsl(0 4% 15% / 10%);
   /* border: 1px solid var(--main-color); */
-  transition: 1.5s;
+  transition: all 1.5s;
 }
 
 .cart.active {
@@ -215,7 +216,7 @@ header {
 .product-box:hover {
   padding: 10px;
   border: 1px solid var(--text-color);
-  transition: 0.4s;
+  transition: all 0.4s;
 }
 
 .product-img {
