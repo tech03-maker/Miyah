@@ -1,159 +1,186 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meeyah E-Comerce</title>
-    <link rel="stylesheet" href="assets/css/index.css">
-    <link rel="stylesheet" href="assets/bootstrap-5.2.2-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/fontawesome-free-6.1.1-web/css/all.css">
-</head>
-<body>
+    <link rel="stylesheet" href="assets/css/index.css" />
+    <link
+      rel="stylesheet"
+      href="assets/bootstrap-5.2.2-dist/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/fontawesome-free-6.1.1-web/css/all.css"
+    />
+  </head>
+  <body>
     <div id="preloader">
-		<img src="assets/images/ezgif-2-6d0b072c3d3f.gif" alt="Loading...">
-	</div>
+      <img src="assets/images/ezgif-2-6d0b072c3d3f.gif" alt="Loading..." />
+    </div>
     <header>
-        <div class="nav container">
-            <a href="index.html" class="logo"><span>Meeyah's</span> Hub</a>
-            <button class="cart-icon position-relative"><i class="fa fa-shopping-bag"></i>
-                <span class="cart-no position-absolute">0</span></button>
+      <div class="nav container">
+        <a href="index.html" class="logo"><span>Meeyah's</span> Hub</a>
+        <button class="cart-icon position-relative">
+          <i class="fa fa-shopping-bag"></i>
+          <span class="cart-no position-absolute">0</span>
+        </button>
 
+        <div class="cart">
+          <h2 class="cart-title">Your Cart</h2>
 
-            <div class="cart">
-                <h2 class="cart-title">Your Cart</h2>
+          <div class="cart-content"></div>
 
-                <div class="cart-content">
-                    
-                </div>
+          <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price">$0</div>
+          </div>
 
-                <div class="total">
-                    <div class="total-title">Total</div>
-                    <div class="total-price">$0</div>
-                </div>
+          <button type="button" class="btn-buy">Buy Now</button>
 
-                <button type="button" class="btn-buy">Buy Now</button>
-
-                <i class="fa fa-x" id="cart-close"></i>
-            </div>
+          <i class="fa fa-x" id="cart-close"></i>
         </div>
+      </div>
     </header>
 
     <div>
-        <img class="w-100 mt-5" src="assets/images/Group 22.png" alt="">
+      <img class="w-100 mt-5" src="assets/images/Group 22.png" alt="" />
     </div>
 
     <section class="shop container">
-        <h2 class="section-title">Shop Products</h2>
+      <h2 class="section-title">Shop Products</h2>
 
-        <div class="shop-content">
-            <!-- BOX-1 -->
-            <div class="product-box">
-                <img src="assets/images/61EGrDIKbdL._AC_SX385_.jpg" alt="" class="product-img">
-                <h2 class="product-title">Crop Top</h2>
-                <span class="product-price">$20.5</span>
-                <i class="fa fa-shopping-bag add-cart"></i>
-
-            </div>
-            <!-- BOX-2 -->
-            <div class="product-box">
-                <img src="assets/images/IMG-20230412-WA0024.jpg" alt="" class="product-img">
-                <h2 class="product-title">Bum Shorts</h2>
-                <span class="product-price">$70.5</span>
-                <i class="fa fa-shopping-bag add-cart"></i>
-
-            </div>
-            <!-- BOX-3 -->
-            <div class="product-box">
-                <img src="assets/images/IMG-20230412-WA0025.jpg" alt="" class="product-img">
-                <h2 class="product-title">Jean Crop Top</h2>
-                <span class="product-price">$90.5</span>
-                <i class="fa fa-shopping-bag add-cart"></i>
-
-            </div>
-            <!-- BOX-4 -->
-            <div class="product-box">
-                <img src="assets/images/IMG-20230412-WA0026.jpg" alt="" class="product-img">
-                <h2 class="product-title">Cargo Joggers</h2>
-                <span class="product-price">$90.5</span>
-                <i class="fa fa-shopping-bag add-cart"></i>
-
-            </div>
-            <!-- BOX-5 -->
-            <div class="product-box">
-                <img src="assets/images/IMG-20230412-WA0027.jpg" alt="" class="product-img">
-                <h2 class="product-title">Dark Joggers</h2>
-                <span class="product-price">$21.5</span>
-                <i class="fa fa-shopping-bag add-cart"></i>
-
-            </div>
-            <!-- BOX-6 -->
-            <div class="product-box">
-                <img src="assets/images/IMG-20230412-WA0028.jpg" alt="" class="product-img">
-                <h2 class="product-title">Fitted Joggers</h2>
-                <span class="product-price">$27.5</span>
-                <i class="fa fa-shopping-bag add-cart"></i>
-
-            </div>
-            <!-- BOX-7 -->
-            <div class="product-box">
-                <img src="assets/images/IMG-20230412-WA0029.jpg" alt="" class="product-img">
-                <h2 class="product-title">Checked T-Shirts</h2>
-                <span class="product-price">$25.5</span>
-                <i class="fa fa-shopping-bag add-cart"></i>
-
-            </div>
-            <!-- BOX-8 -->
-            <div class="product-box">
-                <img src="assets/images/IMG-20230412-WA0031.jpg" alt="" class="product-img">
-                <h2 class="product-title">Chinos Bum Short</h2>
-                <span class="product-price">$19.5</span>
-                <i class="fa fa-shopping-bag add-cart"></i>
-
-            </div>
+      <div class="shop-content">
+        <!-- BOX-1 -->
+        <div class="product-box">
+          <img
+            src="assets/images/61EGrDIKbdL._AC_SX385_.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Crop Top</h2>
+          <span class="product-price">$20.5</span>
+          <i class="fa fa-shopping-bag add-cart"></i>
         </div>
+        <!-- BOX-2 -->
+        <div class="product-box">
+          <img
+            src="assets/images/IMG-20230412-WA0024.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Bum Shorts</h2>
+          <span class="product-price">$70.5</span>
+          <i class="fa fa-shopping-bag add-cart"></i>
+        </div>
+        <!-- BOX-3 -->
+        <div class="product-box">
+          <img
+            src="assets/images/IMG-20230412-WA0025.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Jean Crop Top</h2>
+          <span class="product-price">$90.5</span>
+          <i class="fa fa-shopping-bag add-cart"></i>
+        </div>
+        <!-- BOX-4 -->
+        <div class="product-box">
+          <img
+            src="assets/images/IMG-20230412-WA0026.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Cargo Joggers</h2>
+          <span class="product-price">$90.5</span>
+          <i class="fa fa-shopping-bag add-cart"></i>
+        </div>
+        <!-- BOX-5 -->
+        <div class="product-box">
+          <img
+            src="assets/images/IMG-20230412-WA0027.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Dark Joggers</h2>
+          <span class="product-price">$21.5</span>
+          <i class="fa fa-shopping-bag add-cart"></i>
+        </div>
+        <!-- BOX-6 -->
+        <div class="product-box">
+          <img
+            src="assets/images/IMG-20230412-WA0028.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Fitted Joggers</h2>
+          <span class="product-price">$27.5</span>
+          <i class="fa fa-shopping-bag add-cart"></i>
+        </div>
+        <!-- BOX-7 -->
+        <div class="product-box">
+          <img
+            src="assets/images/IMG-20230412-WA0029.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Checked T-Shirts</h2>
+          <span class="product-price">$25.5</span>
+          <i class="fa fa-shopping-bag add-cart"></i>
+        </div>
+        <!-- BOX-8 -->
+        <div class="product-box">
+          <img
+            src="assets/images/IMG-20230412-WA0031.jpg"
+            alt=""
+            class="product-img"
+          />
+          <h2 class="product-title">Chinos Bum Short</h2>
+          <span class="product-price">$19.5</span>
+          <i class="fa fa-shopping-bag add-cart"></i>
+        </div>
+      </div>
     </section>
 
     <div class="eid container-fluid">
-        <div class="container">
-           <div class="row">
-            <div class="wrapper col-md-12 col-sm-12">
-                <div class="heading">
-                    <h3>EID-l-FITR</h3>
-                    <h1>PROMO SALE!</h1>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="wrapper col-md-12 col-sm-12">
+            <div class="heading">
+              <h3>EID-l-FITR</h3>
+              <h1>PROMO SALE!</h1>
             </div>
-            <div class="countdown col-md-12 col-sm-12">
-                <div class="box">
-                    <span class="num" id="day-box">00</span>
-                    <span class="text">Days</span>
-                </div>
-                <div class="box">
-                    <span class="num" id="hr-box">00</span>
-                    <span class="text">Hours</span>
-                </div>
-                <div class="box">
-                    <span class="num" id="min-box">00</span>
-                    <span class="text">Minutes</span>
-                </div>
-                <div class="box">
-                    <span class="num" id="sec-box">00</span>
-                    <span class="text">Seconds</span>
-                </div>
+          </div>
+          <div class="countdown col-md-12 col-sm-12">
+            <div class="box">
+              <span class="num" id="day-box">00</span>
+              <span class="text">Days</span>
             </div>
-           </div> 
-           
+            <div class="box">
+              <span class="num" id="hr-box">00</span>
+              <span class="text">Hours</span>
+            </div>
+            <div class="box">
+              <span class="num" id="min-box">00</span>
+              <span class="text">Minutes</span>
+            </div>
+            <div class="box">
+              <span class="num" id="sec-box">00</span>
+              <span class="text">Seconds</span>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-</body>
-<script src="assets/js/main.js"></script>
-<script src="assets/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
-<script src="assets/js/countdown.js"></script>
-<script src="https://js.paystack.co/v1/inline.js"></script>
-<!-- <script>
+  </body>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/countdown.js"></script>
+  <script src="https://js.paystack.co/v1/inline.js"></script>
+  <!-- <script>
     window.addEventListener('load', function() {
         document.getElementById('preloader').style.display = 'none';
     }, 6000);
 </script> -->
-
 </html>
