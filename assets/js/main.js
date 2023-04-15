@@ -155,11 +155,11 @@ function handle_buyOrder(){
         callback: function(response) {
           // handle the response from Paystack
 fetch("https://api.paystack.co/transaction/verify/:reference",{headers:{  "Authorization": "sk_live_aba9e75b0550fa9fc333c7eeabd4a0e4fdc345c2"}})
-.then((reponse)=>response.json()).then((response)=>{
+.then((response)=>response.json()).then((response)=>{
     if(response?.data.status==="success"){
         window.location.href = `assets/pages/confirmationpage.html`;
     }
-} )
+} ).catch((error)=>alert("Transaction failed"))
 
 
           console.log(response);
