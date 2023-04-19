@@ -128,7 +128,7 @@ function handle_buyOrder() {
   }
 
   var handler = PaystackPop.setup({
-    key: "pk_live_5d2c90108a7deea456681e80126226cc07c6c5e1",
+    key: "pk_test_510979a43283481872d24b48e0ffa1779c3a4b7b",
     email: "abdulrohufislamiyyah@gmail.com",
     amount: Number(totalElement.innerHTML.substring(1)) * 100,
     currency: "NGN",
@@ -144,17 +144,17 @@ function handle_buyOrder() {
     },
     callback: function (response) {
       // handle the response from Paystack
-      // fetch("https://api.paystack.co/transaction/verify/:reference", {
-      //   headers: {
-      //     Authorization: "sk_live_aba9e75b0550fa9fc333c7eeabd4a0e4fdc345c2",
-      //   },
-      // })
-      //   .then((response) => response.json())
-      //   .then((response) => {
-      //     if (response?.data.status === "success") {
-            window.location.href = `../pages/confirmationpage.html`;
-        //   }
-        // })
+      fetch("https://api.paystack.co/transaction/verify/:reference", {
+        headers: {
+          Authorization: "sk_test_94f226739412d699227ad63a9a6ef60db1ac2f87",
+        },
+      })
+        .then((response) => response.json())
+        .then((response) => {
+          if (response?.data.status === "success") {
+            window.location.href = 'Payment Successful';
+          }
+        })
         // .catch((error) => alert("Transaction failed"));
 
       console.log(response);
@@ -198,7 +198,7 @@ function updateTotal() {
   //keep 2digits after the decimal points
   total = total.toFixed(2);
 
-  totalElement.innerHTML = "$" + total;
+  totalElement.innerHTML = "$" + total * 420;
 }
 
 // HTML COMPONENTS
