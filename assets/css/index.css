@@ -571,8 +571,8 @@ span.text {
 @media (max-width: 720px){
   img{
     max-width: 100%;
-    object-fit: contain;
-    /* height: 20em; */
+    object-fit: cover;
+    /* height: 10em; */
   }
   .card{
     max-width: 10em;
