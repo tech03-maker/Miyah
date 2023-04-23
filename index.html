@@ -6,10 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meeyah E-Comerce</title>
     <link rel="stylesheet" href="assets/css/index.css" />
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link
       rel="stylesheet"
       href="assets/bootstrap-5.2.2-dist/css/bootstrap.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       rel="stylesheet"
       href="assets/fontawesome-free-6.1.1-web/css/all.css"
@@ -17,7 +26,11 @@
   </head>
   <body>
     <div id="preloader">
-      <img src="assets/images/20230312_104442.png" style="background-color: rgb(73, 28, 17);" alt="Loading..." />
+      <img
+        src="assets/images/20230312_104442.png"
+        style="background-color: rgb(73, 28, 17)"
+        alt="Loading..."
+      />
     </div>
     <header>
       <div class="nav container">
@@ -173,30 +186,81 @@
         </div>
       </div>
     </div>
-
-    <div class="wrapper">
-      <div id="search-container">
-        <input type="search" id="search-input" placeholder="Search product name here..">
-        <button id="search">Search</button>
+    <div class="content">
+    
+      <div class="container">
+        <h2 class="my-5 text-center">Latest Products</h2>
+  
+        <div class="d-flex carousel-nav">
+          <a href="#" class="col active">First Product</a>
+          <a href="#" class="col">Second Product</a>
+          <a href="#" class="col">Third Product</a>
+          <a href="#" class="col">Fourth Product</a>
+          <!-- <a href="#" class="col">Fifth Tab</a>
+          <a href="#" class="col">Sixth Tab</a>
+          <a href="#" class="col">Seventh Tab</a> -->
+        </div>
+  
+  
+        <div class="owl-carousel owl-1">
+  
+          <div class="media-29101 d-md-flex w-100">
+            <div class="img">
+              <img src="assets/images/61EGrDIKbdL._AC_SX385_.jpg" alt="Image" class="img-fluid w-auto">
+            </div>
+            <div class="texts">
+              <a class="category d-block mb-4" href="#">Product &mdash; Details</a>
+              <h2><a href="#">Take your mobile photography to the next level</a></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fuga optio dolorem, fugit voluptates sint ducimus praesentium iste!</p>
+            </div>
+          </div> <!-- .item -->
+  
+          <div class="media-29101 d-md-flex w-100">
+            <div class="img">
+              <img src="assets/images/IMG-20230412-WA0038.jpg" alt="Image" class="img-fluid w-auto">
+            </div>
+            <div class="text">
+              <a class="category d-block mb-4" href="#">Product &mdash; Details</a>
+              <h2><a href="#">Take your mobile photography to the next level</a></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fuga optio dolorem, fugit voluptates sint ducimus praesentium iste!</p>
+            </div>
+          </div> <!-- .item -->
+  
+          <div class="media-29101 d-md-flex w-100">
+            <div class="img">
+              <img src="assets/images/IMG-20230412-WA0035.jpg" alt="Image" class="img-fluid w-auto">
+            </div>
+            <div class="text">
+              <a class="category d-block mb-4" href="#">Product &mdash; Details</a>
+              <h2><a href="#">Take your mobile photography to the next level</a></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fuga optio dolorem, fugit voluptates sint ducimus praesentium iste!</p>
+            </div>
+          </div> <!-- .item -->
+          <div class="media-29101 d-md-flex w-100">
+            <div class="img">
+              <img src="assets/images/IMG-20230412-WA0031.jpg" alt="Image" class="img-fluid w-auto">
+            </div>
+            <div class="text">
+              <a class="category d-block mb-4" href="#">Product &mdash; Details</a>
+              <h2><a href="#">Take your mobile photography to the next level</a></h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae fuga optio dolorem, fugit voluptates sint ducimus praesentium iste!</p>
+            </div>
+          </div> <!-- .item -->
+         
+  
+          
+  
+        </div>
       </div>
-      <div id="buttons">
-        <button class="button-value"  onclick="filterProduct('all')">All</button>
-        <button class="button-value"  onclick="filterProduct('Tops')">Tops</button>
-        <button class="button-value"  onclick="filterProduct('Bottomwears')">Bottomwears</button>
-        <button class="button-value"  onclick="filterProduct('Jackets')">Jackets</button>
-      </div>
-      <div id="products"></div>
     </div>
-
   </body>
   <script src="assets/js/main.js"></script>
   <script src="assets/bootstrap-5.2.2-dist/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/countdown.js"></script>
-  <script src="assets/js/search.js"></script>
+  <script src="assets/js/jquery-3.3.1.min.js"></script>
   <script src="https://js.paystack.co/v1/inline.js"></script>
-  <!-- <script>
-    window.addEventListener('load', function() {
-        document.getElementById('preloader').style.display = 'none';
-    }, 6000);
-</script> -->
+ <script src="assets/js/mains.js"></script>
+ <script src="assets/js/popper.min.js"></script>
+ <script src="assets/js/owl.carousel.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 </html>
