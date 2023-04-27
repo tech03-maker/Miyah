@@ -237,6 +237,7 @@ header {
   font-weight: 600;
   text-transform: uppercase;
   margin-bottom: 0.5rem;
+  font-family: 'Poppins', sans-serif;
 }
 
 .product-price {
@@ -254,6 +255,19 @@ header {
 }
 
 .add-cart:hover {
+  background-color: hsl(249, 32%, 17%);
+}
+.add-to-cart {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(78, 7, 7);
+  color: var(--bg-color);
+  padding: 10px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover {
   background-color: hsl(249, 32%, 17%);
 }
 

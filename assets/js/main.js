@@ -52,6 +52,7 @@ function addEvents() {
 
   //add item to cart
   let addCart_btns = document.querySelectorAll(".add-cart");
+  let add_toCart_btns = document.querySelectorAll(".add-to-cart");
   addCart_btns.forEach((btn) => {
     btn.addEventListener("click", handle_addCartItem);
   });
@@ -65,9 +66,11 @@ function addEvents() {
 let itemsAdded = [];
 function handle_addCartItem() {
   let product = this.parentElement;
+  console.log(product)
   let title = product.querySelector(".product-title").innerHTML;
   let price = product.querySelector(".product-price").innerHTML;
   let ImgSrc = product.querySelector(".product-img").src;
+  // let Carts = product.querySelector(".product-below").src;
   console.log(title, price, ImgSrc);
 
   let newToAdd = {
@@ -128,7 +131,7 @@ function handle_buyOrder() {
   }
 
   var handler = PaystackPop.setup({
-    key: "pk_test_510979a43283481872d24b48e0ffa1779c3a4b7b",
+    key: "pk_live_5d2c90108a7deea456681e80126226cc07c6c5e1",
     email: "abdulrohufislamiyyah@gmail.com",
     amount: Number(totalElement.innerHTML.substring(1)) * 100,
     currency: "NGN",
@@ -146,7 +149,7 @@ function handle_buyOrder() {
       // handle the response from Paystack
       fetch("https://api.paystack.co/transaction/verify/:reference", {
         headers: {
-          Authorization: "sk_test_94f226739412d699227ad63a9a6ef60db1ac2f87",
+          Authorization: "sk_live_aba9e75b0550fa9fc333c7eeabd4a0e4fdc345c2",
         },
       })
         .then((response) => response.json())
@@ -198,7 +201,7 @@ function updateTotal() {
   //keep 2digits after the decimal points
   total = total.toFixed(2);
 
-  totalElement.innerHTML = "$" + total * 420;
+  totalElement.innerHTML = `&#8358;` + (total * 420);
 }
 
 // HTML COMPONENTS
