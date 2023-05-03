@@ -201,7 +201,7 @@ function updateTotal() {
   //keep 2digits after the decimal points
   total = total.toFixed(2);
 
-  totalElement.innerHTML = `&#8358;` + (total * 420);
+  totalElement.innerHTML = `&#8358;` + (total * 462);
 }
 
 // HTML COMPONENTS
